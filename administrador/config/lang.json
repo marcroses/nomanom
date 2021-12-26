@@ -98,7 +98,7 @@
       "nomanom7":"Informadors",
       "nomanom8":"Topònims per informador",
       "nomanom9":"Ajuda'ns a aconseguir que no es perdin",
-      "nomanom10":"És una iniciativa del projecte <strong>Nom a nom</strong> disponible al <a href='https://github.com/marcroses/nomanom/tree/master' target=_new>repositori de Github</a> d'en Marc Rosés"
+      "nomanom10":"És una iniciativa del projecte <strong>Nom a nom</strong> disponible al <a href='https://github.com/marcroses/nomanom' target=_new>repositori de Github</a> d'en Marc Rosés"
   },
   "es-ES": {
     "welcome": "Bienvenido al Administrador Nom a nom",
@@ -199,7 +199,7 @@
     "nomanom7":"Informadores",
     "nomanom8":"Topónimos por informador",
     "nomanom9":"Ayúdanos a conseguir que no se pierdan" ,
-    "nomanom10":"Es una iniciativa del proyecto <strong>Nom a nom</strong> disponible en el <a href='https://github.com/marcroses/nomanom/tree/master' target=_new>repositorio de Github</a>"
+    "nomanom10":"Es una iniciativa del proyecto <strong>Nom a nom</strong> disponible en el <a href='https://github.com/marcroses/nomanom' target=_new>repositorio de Github</a>"
   },
   "en-EN": {
     "welcome": "Welcome to Nom a nom Administration Panel",
@@ -300,6 +300,6 @@
     "nomanom7":"Informants",
     "nomanom8":"Toponyms by informant",
     "nomanom9":"Help us make sure they don't get lost",
-    "nomanom10":"This is an initiative of the project <strong>Nom a nom</strong> and available on the <a href='https://github.com/marcroses/nomanom/tree/master' target=_new> <span style='text-decoration: underline;'>Github repository</span> </a>"
+    "nomanom10":"This is an initiative of the project <strong>Nom a nom</strong> and available on the <a href='https://github.com/marcroses/nomanom' target=_new> <span style='text-decoration: underline;'>Github repository</span> </a>"
   }
 }
