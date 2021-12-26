@@ -1,0 +1,155 @@
+﻿
+.navbar{ 
+    background:#9b0409; 
+    padding:0px;/*#c9DB03;#F97300;*/
+}
+
+.navbar-brand{ color: #ffffff; cursor: pointer;}
+
+.nav-link { 
+    color: #888888; 
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-top-left-radius: 0.25 rem;
+    border-top-right-radius: 0.25 rem;
+}
+
+.nav-tabs .nav-link{ 
+    border: 1px #eeeeee solid;
+    background-color: #eeeeee;
+    border-top-left-radius: 0.25 rem;
+    border-top-right-radius: 0.25 rem;
+}
+
+.nav-link, .nav-tabs .nav-link.active {
+    color: #495057;
+    background-color: #fff;
+    border-color: #dee2e6 #dee2e6 #fff;
+}
+
+
+.nav-link{ margin-right: 1em !important;} 
+
+.nav-link:hover{ background: #f4f4f4; color: #333333; }
+
+.navbar-collapse{ justify-content: flex-end;}
+
+.navbar-toggler{  background:#fff !important;}
+
+.bg-dark{
+    background-color:#343a40!important
+}
+.bg-primary{
+    background-color:#007bff!important
+}
+
+a:hover {
+    color: #333333;
+    text-decoration: underline;
+}
+
+/*header style*/
+    .header{
+     background-image: url('../images/headerback.jpg');
+     background-attachment: fixed;
+     background-size: cover;
+     background-position: center;
+     position: relative;  
+    }
+
+    .overlay{
+     position: absolute;
+     min-height: 100%;
+     min-width: 100%;
+     left: 0;
+     top: 0;
+     background: rgba(244, 244, 244, 0.79);
+    }
+
+    .description{
+        position: absolute;
+        top: 30%;
+        margin: auto;
+        padding: 2em;
+
+    }
+    .description h1{
+     color:#F97300 ;
+    }
+    .description p{
+     color:#666;
+     font-size: 18px;
+     width: 0%;
+     line-height: 1.5;
+    }
+    .description button{
+     border:1px  solid #444342;
+     background:#F97300;
+     color:#fff;
+    }
+
+
+/*contact*/
+    .contact-form{
+        position: relative;
+        top: 80px;
+        margin: auto;
+        padding: 2em; 
+    }
+
+    .contact-form h1{
+     padding:2em 1px;
+     color: #F97300; 
+    }
+    .contact-form{
+     max-width: 50%;
+    }
+
+    .contact-form .btn-secondary{
+     background:  #9b0409;
+     color: #ffffff;
+     border:0;
+     font-size:18px;
+    }
+    .contact-form .right .form-control::placeholder{
+     color: #888;
+     font-size: 16px;
+    }
+
+footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    background-color: #cccccc;
+    margin-top: 20px;
+    padding-right: 50px;
+}
+
+.btn-secondary{
+    background:  #9b0409;
+    color: #ffffff;
+    border:0;
+    font-size:18px;
+   }
+
+.note-btn{
+    border:1px solid #cccccc;
+}
+       
+
+.nav-link.disabled {
+    color: #aaaaaa;
+    pointer-events: none;
+    cursor: default;
+  }
+
+  .tab-pane{
+    border-bottom: 1px solid #e4e4e4;
+    border-left: 1px solid #e4e4e4;
+    border-right: 1px solid #e4e4e4;
+  }
+  

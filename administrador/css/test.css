@@ -1,0 +1,19 @@
+ul{
+    list-style: none;
+}
+
+.grup{
+    background: #dddddd;
+}
+.title{
+    color: #333333; 
+    /*background: blue;*/
+    margin-left: 10px;
+    cursor:grab;
+}
+
+li{
+    background: #d0d0d0;
+    margin-bottom: 2px;
+    cursor:grab;
+}
