@@ -707,7 +707,27 @@
             echo "-1";
         }
         $conn->close();         
-    }    
+    }   
+
+    //GET TOPONIYM_SOURCE
+    if ($action=="getToponym_source")
+    {
+        $sql = "SELECT id, source_of_name as name FROM source_of_name where id>0 order by id";
+        //echo $sql;
+        $result = $conn->query($sql);
+        if ($result->num_rows > 0) {
+            while($row = $result->fetch_assoc()) {
+                $rows[] = $row;
+            }
+            echo json_encode($rows);
+        }   
+        else{
+            echo "-1";
+        }
+        $conn->close();         
+    }       
+    
+    
     
 
     //GET TOC

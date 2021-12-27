@@ -79,6 +79,7 @@ function userAddConfig(){
 function saveUser(){
   var params = {
     "action": currentUserAction
+    , "language": language    
     , "id": $("#currentUserModal").val()
     , "frm_user_first_name": $("#frm_user_first_name").val()
     , "frm_user_last_name": $('#frm_user_last_name').val()

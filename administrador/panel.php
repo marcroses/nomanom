@@ -63,7 +63,7 @@
     <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.4.3/proj4.js"></script>-->
     
     <!--Custom-->    
-    <script type="text/javascript" src="js/script.js"></script>
+    <!--<script type="text/javascript" src="js/script.js"></script>-->
     <script type="text/javascript" src="js/FileSaver.min.js"></script>
 
     <!-- Proj4 -->

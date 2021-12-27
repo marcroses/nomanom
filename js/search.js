@@ -104,5 +104,7 @@ function ubicaCerca(id, origen){
         }
     }
 
+    $("#lst_resultat").empty()
+
         
 }

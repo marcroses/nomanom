@@ -1,5 +1,5 @@
 var JSON_Toponyms, JSON_Toponym_types;
-var JSON_Toponym_status, JSON_Toponym_priority, JSON_Toponym_organization;
+var JSON_Toponym_status, JSON_Toponym_priority, JSON_Toponym_organization, JSON_Toponym_source;
 var JSON_TOC;
 var string_Toponyms;
 var actionToponym;
@@ -61,6 +61,7 @@ function getToponyms(){
         setToponym_priority();
         setToponym_organization();
         setSearchEngine();
+        if (users=="restricted") setToponym_source();
     })    
 } 
 
@@ -163,6 +164,29 @@ function setToponym_organization(){
         }
     })    
 } 
+
+
+function setToponym_source(){
+    var params = {
+        "action": "getToponym_source"
+    };
+    $.ajax({
+        type: "POST",
+        url: "administrador/crud.php",
+        data: params
+    }).done(function (data) {
+        if (data.trim()!="-1") {
+            JSON_Toponym_source = JSON.parse(data.trim());
+            $("#source_of_name_id").empty();
+            var opt  ='';
+            for (var i=0; i< JSON_Toponym_source.length; i++){
+                opt = "<option value='" + JSON_Toponym_source[i].id + "'>" + JSON_Toponym_source[i].name + "</option>"                
+                $("#source_of_name_id").append(opt);
+            }
+        }
+    })    
+} 
+
 
 function addToponym(){
     
