@@ -110,9 +110,6 @@
     <script type="text/javascript" src="js/toponym.js"></script>
     <script type="text/javascript" src="js/search.js"></script>
 
-
-
-
     <script>
         var msg='[{}]';
         /*
@@ -141,8 +138,13 @@
     <div id="loader" name="loader" style="width:100%;height:100%;background-color: white;top:0px;position:absolute;opacity:0.9;visibility:hidden;z-index:9999;">
         <center>
             &nbsp;<br />&nbsp;<br />&nbsp;<br />&nbsp;<br />&nbsp;<br />&nbsp;<br />&nbsp;<br />&nbsp;<br />&nbsp;<br />&nbsp;<br />&nbsp;<br />&nbsp;<br />
-            <img id="imgLoader" style="visibility:hidden;"" src="img/ajax-loader.gif" />
+            <img id="imgLoader" style="visibility:hidden;" src="images/ajax-loader.gif" />
             <div style="font-size:16px;color:#808080" id="lblMuni">Recuperant dades...</div>
+            </p>
+            <div class="progress" style="padding: 10px;  width:50%; box-sizing: initial;">
+                <div class="progress-bar bg-success" style="width:0%">0%</div>
+                </p>
+            </div>            
         </center>
     </div>
 

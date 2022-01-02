@@ -4,6 +4,14 @@ var JSON_TOC;
 var string_Toponyms;
 var actionToponym;
 
+var $progressBar = $('.progress');
+
+var progress = 0;      // initial value of your progress bar
+var timeout = 1000;      // number of milliseconds between each frame
+var increment = 1;    // increment for each frame
+var maxprogress = 100; // when to leave stop running the animation
+
+
 function getToponyms(){
     var params = {
         "action": "getToponyms"
@@ -18,52 +26,131 @@ function getToponyms(){
             string_Toponyms = data.trim();
             JSON_Toponyms = JSON.parse(data.trim());
 
-            for (var i = 0; i < JSON_Toponyms.length; i++) {
-                try {
-                    feature = new ol.Feature({});
-                    feature.id = JSON_Toponyms[i].id;
-                    feature.id_named_place = JSON_Toponyms[i].id_named_place;
-                    feature.spelling = JSON_Toponyms[i].spelling;
-                    feature.author_id = JSON_Toponyms[i].author_id;
-                    feature.username = JSON_Toponyms[i].username;
-                    feature.color = JSON_Toponyms[i].color;
-                    feature.id_type=JSON_Toponyms[i].local_type;
-                    feature.ds_type=JSON_Toponyms[i].ds_type;
+            if (JSON_Toponyms.length<500){
 
-                    var coords3857 = new Array();
-                    coords3857.push(JSON_Toponyms[i].longitude);
-                    coords3857.push(JSON_Toponyms[i].latitude);
-                    coords3857 = proj4('EPSG:4326', 'EPSG:3857', coords3857);
-
-                    feature.longitud = coords3857[0];
-                    feature.latitud = coords3857[1];
+                for (var i = 0; i < JSON_Toponyms.length; i++) {
                     try {
-                        //featureSeleccionada.getGeometry().setCoordinates(coordSelectFeature);
-                        var point_geom = new ol.geom.Point(
-                          [coords3857[0], coords3857[1]]
-                        );
-                        feature.setGeometry(point_geom);
-                    } 
-                    catch (err){ 
+                        feature = new ol.Feature({});
+                        feature.id = JSON_Toponyms[i].id;
+                        feature.id_named_place = JSON_Toponyms[i].id_named_place;
+                        feature.spelling = JSON_Toponyms[i].spelling;
+                        feature.author_id = JSON_Toponyms[i].author_id;
+                        feature.username = JSON_Toponyms[i].username;
+                        feature.color = JSON_Toponyms[i].color;
+                        feature.id_type=JSON_Toponyms[i].local_type;
+                        feature.ds_type=JSON_Toponyms[i].ds_type;
+    
+                        var coords3857 = new Array();
+                        coords3857.push(JSON_Toponyms[i].longitude);
+                        coords3857.push(JSON_Toponyms[i].latitude);
+                        coords3857 = proj4('EPSG:4326', 'EPSG:3857', coords3857);
+    
+                        feature.longitud = coords3857[0];
+                        feature.latitud = coords3857[1];
+                        try {
+                            //featureSeleccionada.getGeometry().setCoordinates(coordSelectFeature);
+                            var point_geom = new ol.geom.Point(
+                              [coords3857[0], coords3857[1]]
+                            );
+                            feature.setGeometry(point_geom);
+                        } 
+                        catch (err){ 
+                        }
+                        vectorSource.addFeature(feature);
                     }
-
-
-                    vectorSource.addFeature(feature);
+                    catch (Err) {
+                        var errMsg = Err.toString();
+                    }
                 }
-                catch (Err) {
-                    var errMsg = Err.toString();
-                }
+                
+                topoInit();                
+
             }
-
+            else{
+                maxprogress = JSON_Toponyms.length-1; 
+                $("#imgLoader")[0].style.visibility="visible";
+                $(".progress")[0].style.visibility="visible";
+                $("#lblMuni")[0].style.visibility="visible";
+                $("#loader")[0].style.visibility="visible";                
+                TopoToMap(0);
+            }
         }
-        setToponym_type();       
-        setToponym_status(); 
-        setToponym_priority();
-        setToponym_organization();
-        setSearchEngine();
-        if (users=="restricted") setToponym_source();
+        else{
+            topoInit();
+        }
     })    
 } 
+
+function TopoToMap(init){
+    var top = JSON_Toponyms.length;
+    var lastProgressBarValue = 0;
+    if ((init + 100)<top) top =init+100;
+
+    for (var i = init; i < top; i++) {
+        try {
+
+            feature = new ol.Feature({});
+            feature.id = JSON_Toponyms[i].id;
+            feature.id_named_place = JSON_Toponyms[i].id_named_place;
+            feature.spelling = JSON_Toponyms[i].spelling;
+            feature.author_id = JSON_Toponyms[i].author_id;
+            feature.username = JSON_Toponyms[i].username;
+            feature.color = JSON_Toponyms[i].color;
+            feature.id_type=JSON_Toponyms[i].local_type;
+            feature.ds_type=JSON_Toponyms[i].ds_type;
+
+            var coords3857 = new Array();
+            coords3857.push(JSON_Toponyms[i].longitude);
+            coords3857.push(JSON_Toponyms[i].latitude);
+            coords3857 = proj4('EPSG:4326', 'EPSG:3857', coords3857);
+
+            feature.longitud = coords3857[0];
+            feature.latitud = coords3857[1];
+            try {
+                //featureSeleccionada.getGeometry().setCoordinates(coordSelectFeature);
+                var point_geom = new ol.geom.Point(
+                  [coords3857[0], coords3857[1]]
+                );
+                feature.setGeometry(point_geom);
+            } 
+            catch (err){ 
+            }
+
+
+            vectorSource.addFeature(feature);
+        }
+        catch (Err) {
+            var errMsg = Err.toString();
+        }
+    }
+    if ((init + 100)<JSON_Toponyms.length){
+        setTimeout(function () {
+            $("#lblMuni").html(arrayLang[currentLang]["mapFrm_lbl_46"] + " " + (init + 100) + " / " + maxprogress)
+            var percent = parseFloat(((init + 100) * 100)/maxprogress).toFixed(2);
+            $(".progress-bar").css("width",percent + "%")
+            $(".progress-bar").html(percent + "%")
+            TopoToMap(init + 100);
+        }, 10);        
+        
+    }
+    else{
+        topoInit();
+    }
+
+}
+
+function topoInit(){
+    $("#imgLoader")[0].style.visibility="hidden";
+    $(".progress")[0].style.visibility="hidden";
+    $("#lblMuni")[0].style.visibility="hidden";
+    $("#loader")[0].style.visibility="hidden";
+    setToponym_type();       
+    setToponym_status(); 
+    setToponym_priority();
+    setToponym_organization();
+    setSearchEngine();
+    if (users=="restricted") setToponym_source();
+}
 
 function setToponym_type(){
     var params = {
