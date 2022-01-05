@@ -95,7 +95,7 @@ Ya está lista la aplicación para ser ejecutada.
 
 ## Ejecución ##
 
-###Mmódulo Administrador:###
+**Módulo Administrador:**
 
 - 1.- Abrir un navegador web y introducir la URL **"http:/localhost/CAPERTAPROYECTO/administrador"**, dónde "carpetaproyecto" es el nombre del directorio de la carpeta "htdocs" dónde ha descomprido el proyecto. Por ejemplo **"http:/localhost/nomanom/girona/administrador"**. Aparecerá la siguiente pantalla:
 
@@ -127,7 +127,7 @@ Pueden agregar-se nuevas connexiones a servicios WMTS, WMS, XYZ:
 - 10.- Pulsar el botón "Actualizar" para guardar los cambios.
 
 
-###Módulo Cliente:###
+**Módulo Cliente:**
 
 - 1.- Abrir un navegador web y introducir la URL **"http:/localhost/CAPERTAPROYECTO"**, dónde "carpetaproyecto" es el nombre del directorio de la carpeta "htdocs" dónde ha descomprido el proyecto. Por ejemplo **"http:/localhost/nomanom/girona"**. Aparecerá la siguiente pantalla:
 
