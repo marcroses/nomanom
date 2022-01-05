@@ -76,10 +76,10 @@ La aplicación de un servidor web, tener instalado PHP y el motor de bases de da
 
 Para la instalación hay que seguir los siguientes pasos:
 
-1.- Descargar fichero .ZIP del proyecto 
-2.- Descomprimir el fichero en una carpeta del directorio del servidor web (normalmente "htdocs"). Por ejemplo "c:\xampp\htdocs\nomanom\girona"
-3.- Crear una nueva base de datos MySQL (por ejemplo con PhpMyAdmin)
-4.- Editar el fichero "connectdb.php" y adpatar los datos de connexión a la base de datos con los de la base de datos creada en el punto 3:
+- 1.- Descargar fichero .ZIP del proyecto 
+- 2.- Descomprimir el fichero en una carpeta del directorio del servidor web (normalmente "htdocs"). Por ejemplo "c:\xampp\htdocs\nomanom\girona"
+- 3.- Crear una nueva base de datos MySQL (por ejemplo con PhpMyAdmin)
+- 4.- Editar el fichero "connectdb.php" y adpatar los datos de connexión a la base de datos con los de la base de datos creada en el punto 3:
 
 ```
 <?php
