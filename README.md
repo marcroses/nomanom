@@ -95,9 +95,7 @@ Ya está lista la aplicación para ser ejecutada.
 
 ## Ejecución ##
 
-Vamos primero con el módulo Administrador.
-
-Para la instalación hay que seguir los siguientes pasos:
+###Mmódulo Administrador:###
 
 - 1.- Abrir un navegador web y introducir la URL **"http:/localhost/CAPERTAPROYECTO/administrador"**, dónde carpeta proyecto es el nombre del directorio de la carpeta "htdocs" dónde ha descomprido el proyecto. Por ejemplo **"http:/localhost/nomanom/girona/administrador"**. Aparecerá la siguiente pantalla:
 
@@ -108,5 +106,23 @@ Para la instalación hay que seguir los siguientes pasos:
 - 3.- Configurar el idioma, título y texto de bienvenida en la primera pestaña
 
 - 4.- En la segunda pestaña, desplazar el mapa hasta la zona deseado y al nivel de zoom adecuado para indicar el área de trabajo
+
+- 5.- En la tercera pestaña, seleccionar aquellas capas de fondo y aquellas capas sobrepuestas que se deseen:
+
+
+![Módulo cliente](https://971band.com/nomanom/github_images/admin_p2.png)
+
+Pueden agregar-se nuevas connexiones a servicios WMTS, WMS, XYZ:
+
+![Módulo cliente](https://971band.com/nomanom/github_images/admin_p3.png)
+
+- 6.- En la cuarta pestaña se puede concretar el color principal, el logo corporativo y la imagen de la pàgina de bienvenida.
+
+- 7.- En la quinta pestaña, indicar si el proyecto va a ser de participación ciudadana (usuarios públicos) y por tanto se abre la posibildad que culquier ciudadano pueda darse de alta, o bien restringido a sólo los usuarios que se gestionen desde el administrador
+
+- 8.- En la sexta pestaña, indicar los campos que requieran ser rellenados en la ficha de topónimos.
+
+- 9. Finalmente, para poder enviar emails de verficación a los usuarios que se den de alta, debe rellenarse los datos de la séptima pestaña.
+
 
 
