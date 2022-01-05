@@ -79,7 +79,8 @@ Para la instalación hay que seguir los siguientes pasos:
 - 1.- Descargar fichero .ZIP del proyecto 
 - 2.- Descomprimir el fichero en una carpeta del directorio del servidor web (normalmente "htdocs"). Por ejemplo "c:\xampp\htdocs\nomanom\girona"
 - 3.- Crear una nueva base de datos MySQL (por ejemplo con PhpMyAdmin)
-- 4.- Editar el fichero "connectdb.php" y adpatar los datos de connexión a la base de datos con los de la base de datos creada en el punto 3:
+- 4.- Importar el fichero "administrador/SQL/nomanom_master.sql" de la carpeta creada para restaurar así la base de datos MySQL
+- 5.- Editar el fichero "connectdb.php" y adpatar los datos de connexión a la base de datos con los de la base de datos creada en el punto 3:
 
 ```
 <?php
@@ -98,7 +99,14 @@ Vamos primero con el módulo Administrador.
 
 Para la instalación hay que seguir los siguientes pasos:
 
-1.- Abrir un navegador web y introducir la URL **"http:/localhost/CAPERTAPROYECTO/administrador"**, dónde carpeta proyecto es el nombre del directorio de la carpeta "htdocs" dónde ha descomprido el proyecto. Por ejemplo **"http:/localhost/nomanom/girona/administrador"**. Aparecerá la siguiente pantalla:
+- 1.- Abrir un navegador web y introducir la URL **"http:/localhost/CAPERTAPROYECTO/administrador"**, dónde carpeta proyecto es el nombre del directorio de la carpeta "htdocs" dónde ha descomprido el proyecto. Por ejemplo **"http:/localhost/nomanom/girona/administrador"**. Aparecerá la siguiente pantalla:
 
+![Módulo cliente](https://971band.com/nomanom/github_images/admin_p1.png)
+
+- 2.- Introducir las credenciales para el usuario Administrador: Usuario: **Administrator** y password: **Nomanom**
+
+- 3.- Configurar el idioma, título y texto de bienvenida en la primera pestaña
+
+- 4.- En la segunda pestaña, desplazar el mapa hasta la zona deseado y al nivel de zoom adecuado para indicar el área de trabajo
 
 
