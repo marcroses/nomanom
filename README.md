@@ -28,6 +28,8 @@ Permite especificar los siguientes aspectos del proyecto:
 - Logo, fotografía de la página principal y color principal
 - Campos de la ficha del topónimo que se quiere editar
 
+![Módulo Administrador](https://drive.google.com/file/d/13wW4O42LF3C4526I5M552tT3Di5S8ore/view?usp=sharing)
+
 Todoso estos parámetros se almacenan un una base de datos para su posterior consulta.
 
 **Módulo Cliente**:
