@@ -28,13 +28,15 @@ Permite especificar los siguientes aspectos del proyecto:
 - Logo, fotografía de la página principal y color principal
 - Campos de la ficha del topónimo que se quiere editar
 
-![Módulo Administrador](https://drive.google.com/file/d/13wW4O42LF3C4526I5M552tT3Di5S8ore/view)
+![Módulo Administrador](https://971band.com/nomanom/github_images/admin.png)
 
-Todoso estos parámetros se almacenan un una base de datos para su posterior consulta.
+Todos estos parámetros se almacenan un una base de datos para su posterior consulta.
 
 **Módulo Cliente**:
 
 Consulta los parámetros gestionados por el Módulo Administrador para mostrar, en primer lugar, una página de bienvendia con logo, fotografía y color definidos anteriormente. Muestra también el texto de bienvendia así como un dashboard con del número usuarios registrados y el número de topónimos aportados.
+
+![Módulo cliente](https://971band.com/nomanom/github_images/client1.png)
 
 En segundo lugar muestra el visor general de la aplicació, dónde aparece el mapa de la zona de trabajo, los topónimos ubicados y la posibildad de interactuar con ellos:
 
@@ -44,6 +46,9 @@ En segundo lugar muestra el visor general de la aplicació, dónde aparece el ma
 - Consultar la información de un topónimo
 - Buscar topónimos por palabra clave
 - Exportar el mapa a PDF
+
+![Módulo cliente](https://971band.com/nomanom/github_images/client2.png)
+
 
 **Acceder como usuarios**
 
