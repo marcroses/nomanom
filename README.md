@@ -97,7 +97,7 @@ Ya está lista la aplicación para ser ejecutada.
 
 ###Mmódulo Administrador:###
 
-- 1.- Abrir un navegador web y introducir la URL **"http:/localhost/CAPERTAPROYECTO/administrador"**, dónde carpeta proyecto es el nombre del directorio de la carpeta "htdocs" dónde ha descomprido el proyecto. Por ejemplo **"http:/localhost/nomanom/girona/administrador"**. Aparecerá la siguiente pantalla:
+- 1.- Abrir un navegador web y introducir la URL **"http:/localhost/CAPERTAPROYECTO/administrador"**, dónde "carpetaproyecto" es el nombre del directorio de la carpeta "htdocs" dónde ha descomprido el proyecto. Por ejemplo **"http:/localhost/nomanom/girona/administrador"**. Aparecerá la siguiente pantalla:
 
 ![Módulo cliente](https://971band.com/nomanom/github_images/admin_p1.png)
 
@@ -105,7 +105,7 @@ Ya está lista la aplicación para ser ejecutada.
 
 - 3.- Configurar el idioma, título y texto de bienvenida en la primera pestaña
 
-- 4.- En la segunda pestaña, desplazar el mapa hasta la zona deseado y al nivel de zoom adecuado para indicar el área de trabajo
+- 4.- En la segunda pestaña, desplazar el mapa hasta la zona deseado y al nivel de zoom adecuado para indicar el área de trabajo.
 
 - 5.- En la tercera pestaña, seleccionar aquellas capas de fondo y aquellas capas sobrepuestas que se deseen:
 
@@ -118,11 +118,41 @@ Pueden agregar-se nuevas connexiones a servicios WMTS, WMS, XYZ:
 
 - 6.- En la cuarta pestaña se puede concretar el color principal, el logo corporativo y la imagen de la pàgina de bienvenida.
 
-- 7.- En la quinta pestaña, indicar si el proyecto va a ser de participación ciudadana (usuarios públicos) y por tanto se abre la posibildad que culquier ciudadano pueda darse de alta, o bien restringido a sólo los usuarios que se gestionen desde el administrador
+- 7.- En la quinta pestaña, indicar si el proyecto va a ser de participación ciudadana (usuarios públicos) y por tanto se abre la posibildad que culquier ciudadano pueda darse de alta, o bien restringido a sólo los usuarios que se gestionen desde el administrador. En nuestro ejemplo, dejaremos la opción de usuarios públicos.
 
 - 8.- En la sexta pestaña, indicar los campos que requieran ser rellenados en la ficha de topónimos.
 
-- 9. Finalmente, para poder enviar emails de verficación a los usuarios que se den de alta, debe rellenarse los datos de la séptima pestaña.
+- 9.- Finalmente, para poder enviar emails de verficación a los usuarios que se den de alta, debe rellenarse los datos de la séptima pestaña.
+
+- 10.- Pulsar el botón "Actualizar" para guardar los cambios.
 
 
+###Módulo Cliente:###
 
+- 1.- Abrir un navegador web y introducir la URL **"http:/localhost/CAPERTAPROYECTO"**, dónde "carpetaproyecto" es el nombre del directorio de la carpeta "htdocs" dónde ha descomprido el proyecto. Por ejemplo **"http:/localhost/nomanom/girona"**. Aparecerá la siguiente pantalla:
+
+![Módulo cliente](https://971band.com/nomanom/github_images/client_p1.png)
+
+Esta es la página de bienvenida, dónde el idioma, el color principal, logos, texto de bienvenida y fotograía se han configurado a través del módulo administrador.
+
+- 2.-Pulsar "Explorar y colaborar" para acceder al visor. Aparecerá la siguiente página:
+
+![Módulo cliente](https://971band.com/nomanom/github_images/client_p2.png)
+
+- 3.-Pulsar "Acceder" para darse de alta como nuyevo usuario:
+
+![Módulo cliente](https://971band.com/nomanom/github_images/client_p3.png)
+
+- 4.-Pulsar el botón rojo que aparece a la izquierda para añadir nuevos topónimos. Se observa que los campos de la ficha son los definidos en el módulo administrador. Es necesario pulsar el botón "Ubicación en el mapa" para hacer un click en el mapa y ubicar el topónimo
+
+![Módulo cliente](https://971band.com/nomanom/github_images/client_p4.png)
+
+- 5.- Pueden ocultarse y mostrarse los topónimos a través de hacer click en los distintos tipos de topónimos en la leyenda de la parte derecha. 
+
+- 6.- Puede cambiarse la base de fondo o capas superpuestas mediante los desplegables de la derecha
+
+![Módulo cliente](https://971band.com/nomanom/github_images/client_p5.png)
+
+- 7.- Pueden exportarse los topónimos a formato hoja de cálculo e imprimir en PDF.
+
+- 8.- Existe la posibilidad de buscar topónimos por palabra clave o bien buscar lugares coicnidentes de OpenStreetMap
