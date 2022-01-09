@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 26-12-2021 a las 07:33:28
+-- Tiempo de generación: 09-01-2022 a las 08:04:11
 -- Versión del servidor: 10.4.14-MariaDB
 -- Versión de PHP: 7.3.21
 
@@ -444,15 +444,17 @@ INSERT INTO `project_editable_fields` (`id`, `name`, `editable`) VALUES
 CREATE TABLE `project_settings` (
   `project_domain` varchar(255) NOT NULL,
   `email_sender` varchar(255) NOT NULL,
-  `email_sender_pwd` varchar(255) NOT NULL
+  `email_sender_pwd` varchar(255) NOT NULL,
+  `captcha_web` varchar(255) NOT NULL,
+  `captcha_server` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `project_settings`
 --
 
-INSERT INTO `project_settings` (`project_domain`, `email_sender`, `email_sender_pwd`) VALUES
-('https://www.mydomain.com/nomanom', 'info@mydomain.com', 'password');
+INSERT INTO `project_settings` (`project_domain`, `email_sender`, `email_sender_pwd`, `captcha_web`, `captcha_server`) VALUES
+('https://www.mydomain.com/nomanom', 'info@mydomain.com', 'password', '6LeXzGgdAAAAANYDkH41MfXB2rsrAn1mK3xiyWgf', '');
 
 -- --------------------------------------------------------
 

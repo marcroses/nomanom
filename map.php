@@ -9,6 +9,15 @@
         }
     }   
 
+    $sql = "select * from project_settings";
+    $result = $conn->query($sql);
+    if ($result->num_rows > 0) {
+        while($row = $result->fetch_assoc()) {
+            $captcha_web = $row["captcha_web"];
+        }
+    }   
+
+
     $sql = "select * from project_editable_fields";
     $result = $conn->query($sql);
     if ($result->num_rows > 0) {
@@ -676,7 +685,7 @@
             <div class="row">
                 <div class="col-sm-12">
                     <div class="form-group">
-                        <center><div class="g-recaptcha" data-sitekey="6LeXzGgdAAAAANYDkH41MfXB2rsrAn1mK3xiyWgf"></div></center>
+                        <center><div class="g-recaptcha" data-sitekey="<?php echo $captcha_web;?>"></div></center>
                     </div>
                 </div>
             </div>

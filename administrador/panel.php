@@ -364,6 +364,18 @@
                                         </div>
 
                                     </div>
+
+                                    <div class="form-group row">
+                                        <div class="col-lg-6">
+                                            <label for="frm_captcha_client"><span class="lang" key="frm_email_sender">Clau Captcha Web:</span></label>
+                                            <input type="text" class="form-control" id="frm_captcha_client" name="frm_captcha_client">
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <label for="frm_captcha_server"><span class="lang" key="frm_captcha_server">Clau Captcha Server:</span></label>
+                                            <input type="password" class="form-control" id="frm_captcha_server" name="frm_captcha_server">
+                                        </div>
+
+                                    </div>                                    
                                 </div>
                             </div>                         
 
@@ -733,6 +745,9 @@
                     $("#frm_project_domain").val(JSON.parse(data.trim())[0].project_domain);
                     $("#frm_email_sender").val(JSON.parse(data.trim())[0].email_sender);
                     $("#frm_email_sender_pwd").val(JSON.parse(data.trim())[0].email_sender_pwd);
+                    $("#frm_captcha_client").val(JSON.parse(data.trim())[0].captcha_web);
+                    $("#frm_captcha_server").val(JSON.parse(data.trim())[0].captcha_server);
+
                 }
             })    
         }
@@ -786,6 +801,8 @@
                 , "project_domain":  $("#frm_project_domain").val()
                 , "email_sender":  $("#frm_email_sender").val()
                 , "email_sender_pwd":  $("#frm_email_sender_pwd").val()
+                , "frm_captcha_client":  $("#frm_captcha_client").val()
+                , "frm_captcha_server":  $("#frm_captcha_server").val()
             };
             $.ajax({
                 type: "POST",
