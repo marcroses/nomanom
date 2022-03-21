@@ -414,8 +414,6 @@
         $project_domain = $_POST["project_domain"]; 
         $email_sender = $_POST["email_sender"]; 
         $email_sender_pwd = $_POST["email_sender_pwd"]; 
-        $frm_captcha_client = $_POST["frm_captcha_client"]; 
-        $frm_captcha_server = $_POST["frm_captcha_server"]; 
 
         $sql = "update project set title='".$title."'";
         $sql .= ", description='".str_replace("'", "´", $description)."'";
@@ -428,10 +426,8 @@
         $sql .= ", color_4='".$color_4."' ";
         $sql .= ", logo='".$logo."' ";
         $sql .= ", photo='".$photo."' ";
-        $sql .= ", users='".$users."' ";
         $sql .= ", language='".$language."' ";
-
-        //echo $sql;
+        $sql .= ", users='".$users."' ";
 
         if ($conn->query($sql) === TRUE) {
 
@@ -439,9 +435,7 @@
             $sql = "update project_settings set project_domain='".$project_domain."'";
             $sql .= ", email_sender='".$email_sender."' ";            
             $sql .= ", email_sender_pwd='".$email_sender_pwd."' ";
-            $sql .= ", captcha_web='".$frm_captcha_client."' ";
-            $sql .= ", captcha_server='".$frm_captcha_server."' ";
-                
+            
             $conn->query($sql);
 
             
@@ -463,12 +457,22 @@
 
             $project_over_layer = $_POST["project_over_layer"];             
             $arrayBs = explode("#",$project_over_layer);
+            /*
             foreach($arrayBs as $bs) {
                 $layer = explode("|",$bs);
                 $sql="insert into project_wms (project_id, wms_id) values (1,".$layer[0].")";
-                //echo $sql;
+                echo $sql;
                 $conn->query($sql);
-            }            
+            } 
+            */           
+
+            foreach($arrayBs as $bs) {
+				if ($bs[2]!=''){
+                  $sql="insert into project_wms (project_id, wms_id) values (1,".$bs[2].")";
+                  //echo $sql;     
+                  $conn->query($sql);           
+                }
+            }             
             
 
             $project_fields = $_POST["project_fields"];             
@@ -606,7 +610,7 @@
         $sql .= ",'".$format."' ";
         $sql .= ",'".$layers."') ";
 
-        echo $sql;
+        //echo $sql;
         if ($conn->query($sql) === TRUE) {
             echo "ok";
         } 
@@ -713,27 +717,7 @@
             echo "-1";
         }
         $conn->close();         
-    }   
-
-    //GET TOPONIYM_SOURCE
-    if ($action=="getToponym_source")
-    {
-        $sql = "SELECT id, source_of_name as name FROM source_of_name where id>0 order by id";
-        //echo $sql;
-        $result = $conn->query($sql);
-        if ($result->num_rows > 0) {
-            while($row = $result->fetch_assoc()) {
-                $rows[] = $row;
-            }
-            echo json_encode($rows);
-        }   
-        else{
-            echo "-1";
-        }
-        $conn->close();         
-    }       
-    
-    
+    }    
     
 
     //GET TOC

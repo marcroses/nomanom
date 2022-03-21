@@ -63,7 +63,7 @@
     <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.4.3/proj4.js"></script>-->
     
     <!--Custom-->    
-    <!--<script type="text/javascript" src="js/script.js"></script>-->
+    <script type="text/javascript" src="js/script.js"></script>
     <script type="text/javascript" src="js/FileSaver.min.js"></script>
 
     <!-- Proj4 -->
@@ -364,18 +364,6 @@
                                         </div>
 
                                     </div>
-
-                                    <div class="form-group row">
-                                        <div class="col-lg-6">
-                                            <label for="frm_captcha_client"><span class="lang" key="frm_email_sender">Clau Captcha Web:</span></label>
-                                            <input type="text" class="form-control" id="frm_captcha_client" name="frm_captcha_client">
-                                        </div>
-                                        <div class="col-lg-6">
-                                            <label for="frm_captcha_server"><span class="lang" key="frm_captcha_server">Clau Captcha Server:</span></label>
-                                            <input type="password" class="form-control" id="frm_captcha_server" name="frm_captcha_server">
-                                        </div>
-
-                                    </div>                                    
                                 </div>
                             </div>                         
 
@@ -745,9 +733,6 @@
                     $("#frm_project_domain").val(JSON.parse(data.trim())[0].project_domain);
                     $("#frm_email_sender").val(JSON.parse(data.trim())[0].email_sender);
                     $("#frm_email_sender_pwd").val(JSON.parse(data.trim())[0].email_sender_pwd);
-                    $("#frm_captcha_client").val(JSON.parse(data.trim())[0].captcha_web);
-                    $("#frm_captcha_server").val(JSON.parse(data.trim())[0].captcha_server);
-
                 }
             })    
         }
@@ -762,21 +747,32 @@
             }
             var project_base_layer="";
             var j=0;
-            for (var i=1; i < JSON_baseLayersSource.length +1 ; i++){
-                if ($("#cbBs_" + i).is(":checked")) project_base_layer = project_base_layer + i + "|" + j+ "#";
+            for (var i=0; i < JSON_baseLayersSource.length +1 ; i++){
+                try{
+                    if ($("#cbBs_" + i).is(":checked")) project_base_layer = project_base_layer + i + "|" + JSON_baseLayersSource[i].id + "#";
+                }
+                catch(Err){}
                 j++;
             }
 
             var project_over_layer="";
             var j=0;
-            for (var i=1; i < JSON_OverLayersSource.length +1 ; i++){
-                if ($("#cbOl_" + i).is(":checked")) project_over_layer = project_over_layer + i + "|" + j+ "#";
+            for (var i=0; i < JSON_OverLayersSource.length; i++){
+                try{
+                    if ($("#cbOl_" + JSON_OverLayersSource[i].id).is(":checked")) {
+                        project_over_layer = project_over_layer + i + "|" + JSON_OverLayersSource[i].id + "#";
+                    }
+                }
+                catch(Err)
+                {
+                    var a =1;
+                }
                 j++;
             }            
 
             var project_fields="";
             var j=0;
-            for (var i=0; i < JSON_Fields.length +1 ; i++){
+            for (var i=1; i < JSON_Fields.length +1 ; i++){
                 if ($("#cbField_" + i).is(":checked")) project_fields = project_fields + i + "#";
             }            
 
@@ -801,8 +797,6 @@
                 , "project_domain":  $("#frm_project_domain").val()
                 , "email_sender":  $("#frm_email_sender").val()
                 , "email_sender_pwd":  $("#frm_email_sender_pwd").val()
-                , "frm_captcha_client":  $("#frm_captcha_client").val()
-                , "frm_captcha_server":  $("#frm_captcha_server").val()
             };
             $.ajax({
                 type: "POST",

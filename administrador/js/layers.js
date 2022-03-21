@@ -199,30 +199,40 @@ function showMap2(id){
 function layerConfig(mapType, id){
   if (mapType=='base'){
     currentBs = id;
+    for (var j=0; j<JSON_baseLayersSource.length;j++){
+      if (JSON_baseLayersSource[j].id==id){
+        break;
+      }
+    }    
     id=id-1;
     currentAction="saveBaseLayerSource";
-    $('#layerConfigTitle').text(JSON_baseLayersSource[id].title);
-    $('#frm_bs_title').val(JSON_baseLayersSource[id].title);
-    $('#frm_bs_name').val(JSON_baseLayersSource[id].name);
-    $('#frm_bs_url').val(JSON_baseLayersSource[id].url);
-    $('#frm_bs_attribution').val(JSON_baseLayersSource[id].attribution);
-    $('#frm_bs_format').val(JSON_baseLayersSource[id].format);
-    $('#frm_bs_layerNames').val(JSON_baseLayersSource[id].layerNames);
-    $('#frm_bs_matrixSet').val(JSON_baseLayersSource[id].matrixSet);
-    $("#frm_bs_type").val(JSON_baseLayersSource[id].type).change();
+    $('#layerConfigTitle').text(JSON_baseLayersSource[j].title);
+    $('#frm_bs_title').val(JSON_baseLayersSource[j].title);
+    $('#frm_bs_name').val(JSON_baseLayersSource[j].name);
+    $('#frm_bs_url').val(JSON_baseLayersSource[j].url);
+    $('#frm_bs_attribution').val(JSON_baseLayersSource[j].attribution);
+    $('#frm_bs_format').val(JSON_baseLayersSource[j].format);
+    $('#frm_bs_layerNames').val(JSON_baseLayersSource[j].layerNames);
+    $('#frm_bs_matrixSet').val(JSON_baseLayersSource[j].matrixSet);
+    $("#frm_bs_type").val(JSON_baseLayersSource[j].type).change();
     $('#layerConfigModal').modal('show');
     prepareInputLayers();
   }
   if (mapType=='overlay'){
     currentOv = id;
+    for (var j=0; j<JSON_OverLayersSource.length;j++){
+      if (JSON_OverLayersSource[j].id==id){
+        break;
+      }
+    }
     id=id-1;
     currentAction="saveWMSSource";
-    $('#layerOverlayConfigTitle').text(JSON_OverLayersSource[id].description);
-    $('#frm_Overlay_title').val(JSON_OverLayersSource[id].description);
-    $('#frm_Overlay_name').val(JSON_OverLayersSource[id].name);
-    $('#frm_Overlay_url').val(JSON_OverLayersSource[id].url);
-    $('#frm_Overlay_format').val(JSON_OverLayersSource[id].format);
-    $('#frm_Overlay_layers').val(JSON_OverLayersSource[id].layers);
+    $('#layerOverlayConfigTitle').text(JSON_OverLayersSource[j].description);
+    $('#frm_Overlay_title').val(JSON_OverLayersSource[j].description);
+    $('#frm_Overlay_name').val(JSON_OverLayersSource[j].name);
+    $('#frm_Overlay_url').val(JSON_OverLayersSource[j].url);
+    $('#frm_Overlay_format').val(JSON_OverLayersSource[j].format);
+    $('#frm_Overlay_layers').val(JSON_OverLayersSource[j].layers);
     $('#layerOverlayConfigModal').modal('show');
   }  
 }

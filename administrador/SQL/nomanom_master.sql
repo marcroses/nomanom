@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 09-01-2022 a las 08:04:11
--- Versión del servidor: 10.4.14-MariaDB
--- Versión de PHP: 7.3.21
+-- Temps de generació: 20-03-2022 a les 08:14:29
+-- Versió del servidor: 10.4.14-MariaDB
+-- Versió de PHP: 7.3.21
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,13 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `nomanom_master`
+-- Base de dades: `nomanom_master`
 --
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `auth_user`
+-- Estructura de la taula `auth_user`
 --
 
 CREATE TABLE `auth_user` (
@@ -42,7 +42,7 @@ CREATE TABLE `auth_user` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Volcado de datos para la tabla `auth_user`
+-- Bolcament de dades per a la taula `auth_user`
 --
 
 INSERT INTO `auth_user` (`id`, `password`, `last_login`, `is_superuser`, `username`, `first_name`, `last_name`, `email`, `is_staff`, `is_active`, `date_joined`) VALUES
@@ -51,7 +51,7 @@ INSERT INTO `auth_user` (`id`, `password`, `last_login`, `is_superuser`, `userna
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `competent_organization`
+-- Estructura de la taula `competent_organization`
 --
 
 CREATE TABLE `competent_organization` (
@@ -60,7 +60,7 @@ CREATE TABLE `competent_organization` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Volcado de datos para la tabla `competent_organization`
+-- Bolcament de dades per a la taula `competent_organization`
 --
 
 INSERT INTO `competent_organization` (`id`, `name`) VALUES
@@ -76,7 +76,7 @@ INSERT INTO `competent_organization` (`id`, `name`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `geographical_name`
+-- Estructura de la taula `geographical_name`
 --
 
 CREATE TABLE `geographical_name` (
@@ -95,7 +95,7 @@ CREATE TABLE `geographical_name` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `geographical_name_informer`
+-- Estructura de la taula `geographical_name_informer`
 --
 
 CREATE TABLE `geographical_name_informer` (
@@ -106,7 +106,7 @@ CREATE TABLE `geographical_name_informer` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `informer`
+-- Estructura de la taula `informer`
 --
 
 CREATE TABLE `informer` (
@@ -123,7 +123,7 @@ CREATE TABLE `informer` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Volcado de datos para la tabla `informer`
+-- Bolcament de dades per a la taula `informer`
 --
 
 INSERT INTO `informer` (`id`, `name`, `surname`, `surname2`, `type`, `address`, `telephone`, `municipality`, `birth_year`, `death_year`) VALUES
@@ -132,7 +132,7 @@ INSERT INTO `informer` (`id`, `name`, `surname`, `surname2`, `type`, `address`, 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `named_place`
+-- Estructura de la taula `named_place`
 --
 
 CREATE TABLE `named_place` (
@@ -154,7 +154,7 @@ CREATE TABLE `named_place` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `named_place_local_type`
+-- Estructura de la taula `named_place_local_type`
 --
 
 CREATE TABLE `named_place_local_type` (
@@ -167,7 +167,7 @@ CREATE TABLE `named_place_local_type` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Volcado de datos para la tabla `named_place_local_type`
+-- Bolcament de dades per a la taula `named_place_local_type`
 --
 
 INSERT INTO `named_place_local_type` (`id`, `locale`, `name_ca`, `name_es`, `name_en`, `named_place_local_type_id`) VALUES
@@ -247,7 +247,7 @@ INSERT INTO `named_place_local_type` (`id`, `locale`, `name_ca`, `name_es`, `nam
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `named_place_type`
+-- Estructura de la taula `named_place_type`
 --
 
 CREATE TABLE `named_place_type` (
@@ -259,7 +259,7 @@ CREATE TABLE `named_place_type` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Volcado de datos para la tabla `named_place_type`
+-- Bolcament de dades per a la taula `named_place_type`
 --
 
 INSERT INTO `named_place_type` (`id`, `name_en`, `name_ca`, `name_es`, `color`) VALUES
@@ -276,7 +276,7 @@ INSERT INTO `named_place_type` (`id`, `name_en`, `name_ca`, `name_es`, `color`) 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `name_status`
+-- Estructura de la taula `name_status`
 --
 
 CREATE TABLE `name_status` (
@@ -285,7 +285,7 @@ CREATE TABLE `name_status` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Volcado de datos para la tabla `name_status`
+-- Bolcament de dades per a la taula `name_status`
 --
 
 INSERT INTO `name_status` (`id`, `name`) VALUES
@@ -297,7 +297,7 @@ INSERT INTO `name_status` (`id`, `name`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `priority`
+-- Estructura de la taula `priority`
 --
 
 CREATE TABLE `priority` (
@@ -306,7 +306,7 @@ CREATE TABLE `priority` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Volcado de datos para la tabla `priority`
+-- Bolcament de dades per a la taula `priority`
 --
 
 INSERT INTO `priority` (`id`, `name`) VALUES
@@ -317,7 +317,7 @@ INSERT INTO `priority` (`id`, `name`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `project`
+-- Estructura de la taula `project`
 --
 
 CREATE TABLE `project` (
@@ -338,7 +338,7 @@ CREATE TABLE `project` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Volcado de datos para la tabla `project`
+-- Bolcament de dades per a la taula `project`
 --
 
 INSERT INTO `project` (`id`, `title`, `description`, `logo`, `primary_color`, `color_2`, `color_3`, `color_4`, `longitude`, `latitude`, `zoom`, `language`, `users`, `photo`) VALUES
@@ -347,7 +347,7 @@ INSERT INTO `project` (`id`, `title`, `description`, `logo`, `primary_color`, `c
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `project_base_layers`
+-- Estructura de la taula `project_base_layers`
 --
 
 CREATE TABLE `project_base_layers` (
@@ -357,7 +357,7 @@ CREATE TABLE `project_base_layers` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Volcado de datos para la tabla `project_base_layers`
+-- Bolcament de dades per a la taula `project_base_layers`
 --
 
 INSERT INTO `project_base_layers` (`project_Id`, `base_layer_source_id`, `position`) VALUES
@@ -373,7 +373,7 @@ INSERT INTO `project_base_layers` (`project_Id`, `base_layer_source_id`, `positi
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `project_base_layer_source`
+-- Estructura de la taula `project_base_layer_source`
 --
 
 CREATE TABLE `project_base_layer_source` (
@@ -390,7 +390,7 @@ CREATE TABLE `project_base_layer_source` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Volcado de datos para la tabla `project_base_layer_source`
+-- Bolcament de dades per a la taula `project_base_layer_source`
 --
 
 INSERT INTO `project_base_layer_source` (`id`, `name`, `url`, `layerNames`, `type`, `title`, `format`, `matrixSet`, `attribution`, `position`) VALUES
@@ -411,7 +411,7 @@ INSERT INTO `project_base_layer_source` (`id`, `name`, `url`, `layerNames`, `typ
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `project_editable_fields`
+-- Estructura de la taula `project_editable_fields`
 --
 
 CREATE TABLE `project_editable_fields` (
@@ -421,7 +421,7 @@ CREATE TABLE `project_editable_fields` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Volcado de datos para la tabla `project_editable_fields`
+-- Bolcament de dades per a la taula `project_editable_fields`
 --
 
 INSERT INTO `project_editable_fields` (`id`, `name`, `editable`) VALUES
@@ -438,7 +438,7 @@ INSERT INTO `project_editable_fields` (`id`, `name`, `editable`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `project_settings`
+-- Estructura de la taula `project_settings`
 --
 
 CREATE TABLE `project_settings` (
@@ -450,7 +450,7 @@ CREATE TABLE `project_settings` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Volcado de datos para la tabla `project_settings`
+-- Bolcament de dades per a la taula `project_settings`
 --
 
 INSERT INTO `project_settings` (`project_domain`, `email_sender`, `email_sender_pwd`, `captcha_web`, `captcha_server`) VALUES
@@ -459,7 +459,7 @@ INSERT INTO `project_settings` (`project_domain`, `email_sender`, `email_sender_
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `project_wms`
+-- Estructura de la taula `project_wms`
 --
 
 CREATE TABLE `project_wms` (
@@ -468,7 +468,7 @@ CREATE TABLE `project_wms` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Volcado de datos para la tabla `project_wms`
+-- Bolcament de dades per a la taula `project_wms`
 --
 
 INSERT INTO `project_wms` (`project_id`, `wms_id`) VALUES
@@ -477,7 +477,7 @@ INSERT INTO `project_wms` (`project_id`, `wms_id`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `project_wms_source`
+-- Estructura de la taula `project_wms_source`
 --
 
 CREATE TABLE `project_wms_source` (
@@ -490,7 +490,7 @@ CREATE TABLE `project_wms_source` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Volcado de datos para la tabla `project_wms_source`
+-- Bolcament de dades per a la taula `project_wms_source`
 --
 
 INSERT INTO `project_wms_source` (`name`, `description`, `url`, `id`, `format`, `layers`) VALUES
@@ -501,7 +501,7 @@ INSERT INTO `project_wms_source` (`name`, `description`, `url`, `id`, `format`, 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `pronuntiation_of_name`
+-- Estructura de la taula `pronuntiation_of_name`
 --
 
 CREATE TABLE `pronuntiation_of_name` (
@@ -514,7 +514,7 @@ CREATE TABLE `pronuntiation_of_name` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `source_of_name`
+-- Estructura de la taula `source_of_name`
 --
 
 CREATE TABLE `source_of_name` (
@@ -523,7 +523,7 @@ CREATE TABLE `source_of_name` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Volcado de datos para la tabla `source_of_name`
+-- Bolcament de dades per a la taula `source_of_name`
 --
 
 INSERT INTO `source_of_name` (`id`, `source_of_name`) VALUES
@@ -531,23 +531,23 @@ INSERT INTO `source_of_name` (`id`, `source_of_name`) VALUES
 (2, 'BT 1:5000');
 
 --
--- Índices para tablas volcadas
+-- Índexs per a les taules bolcades
 --
 
 --
--- Indices de la tabla `auth_user`
+-- Índexs per a la taula `auth_user`
 --
 ALTER TABLE `auth_user`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `competent_organization`
+-- Índexs per a la taula `competent_organization`
 --
 ALTER TABLE `competent_organization`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `geographical_name`
+-- Índexs per a la taula `geographical_name`
 --
 ALTER TABLE `geographical_name`
   ADD PRIMARY KEY (`id`),
@@ -558,20 +558,20 @@ ALTER TABLE `geographical_name`
   ADD KEY `geographical_name_priority_id_FK` (`priority_id`);
 
 --
--- Indices de la tabla `geographical_name_informer`
+-- Índexs per a la taula `geographical_name_informer`
 --
 ALTER TABLE `geographical_name_informer`
   ADD KEY `geographical_name_infomer_geographical_name_id` (`geographical_name_id`),
   ADD KEY `geographical_name_infomer_informer_id` (`informer_id`);
 
 --
--- Indices de la tabla `informer`
+-- Índexs per a la taula `informer`
 --
 ALTER TABLE `informer`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `named_place`
+-- Índexs per a la taula `named_place`
 --
 ALTER TABLE `named_place`
   ADD PRIMARY KEY (`id`),
@@ -580,181 +580,181 @@ ALTER TABLE `named_place`
   ADD KEY `named_place_local_type_id_FK` (`named_place_local_type_id`);
 
 --
--- Indices de la tabla `named_place_local_type`
+-- Índexs per a la taula `named_place_local_type`
 --
 ALTER TABLE `named_place_local_type`
   ADD PRIMARY KEY (`id`),
   ADD KEY `named_place_local_type_named_place_type_id_FK` (`named_place_local_type_id`);
 
 --
--- Indices de la tabla `named_place_type`
+-- Índexs per a la taula `named_place_type`
 --
 ALTER TABLE `named_place_type`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `name_status`
+-- Índexs per a la taula `name_status`
 --
 ALTER TABLE `name_status`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `priority`
+-- Índexs per a la taula `priority`
 --
 ALTER TABLE `priority`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `project`
+-- Índexs per a la taula `project`
 --
 ALTER TABLE `project`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `project_base_layers`
+-- Índexs per a la taula `project_base_layers`
 --
 ALTER TABLE `project_base_layers`
   ADD KEY `project_base_layers_base_id_layerFK` (`base_layer_source_id`),
   ADD KEY `project_base_layers_project_id__FK` (`project_Id`);
 
 --
--- Indices de la tabla `project_base_layer_source`
+-- Índexs per a la taula `project_base_layer_source`
 --
 ALTER TABLE `project_base_layer_source`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `project_editable_fields`
+-- Índexs per a la taula `project_editable_fields`
 --
 ALTER TABLE `project_editable_fields`
   ADD UNIQUE KEY `id` (`id`);
 
 --
--- Indices de la tabla `project_wms`
+-- Índexs per a la taula `project_wms`
 --
 ALTER TABLE `project_wms`
   ADD KEY `project_wms_wms_id_layer_FK` (`wms_id`),
   ADD KEY `project_wms_project_id__FK` (`project_id`);
 
 --
--- Indices de la tabla `project_wms_source`
+-- Índexs per a la taula `project_wms_source`
 --
 ALTER TABLE `project_wms_source`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `pronuntiation_of_name`
+-- Índexs per a la taula `pronuntiation_of_name`
 --
 ALTER TABLE `pronuntiation_of_name`
   ADD PRIMARY KEY (`id`),
   ADD KEY `pronuntiation_of_name_geographical_name_id_FK` (`geografical_name_id`);
 
 --
--- Indices de la tabla `source_of_name`
+-- Índexs per a la taula `source_of_name`
 --
 ALTER TABLE `source_of_name`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT de las tablas volcadas
+-- AUTO_INCREMENT per les taules bolcades
 --
 
 --
--- AUTO_INCREMENT de la tabla `auth_user`
+-- AUTO_INCREMENT per la taula `auth_user`
 --
 ALTER TABLE `auth_user`
   MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT de la tabla `competent_organization`
+-- AUTO_INCREMENT per la taula `competent_organization`
 --
 ALTER TABLE `competent_organization`
   MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
--- AUTO_INCREMENT de la tabla `geographical_name`
+-- AUTO_INCREMENT per la taula `geographical_name`
 --
 ALTER TABLE `geographical_name`
   MODIFY `id` int(20) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `informer`
+-- AUTO_INCREMENT per la taula `informer`
 --
 ALTER TABLE `informer`
   MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT de la tabla `named_place`
+-- AUTO_INCREMENT per la taula `named_place`
 --
 ALTER TABLE `named_place`
   MODIFY `id` int(20) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `named_place_local_type`
+-- AUTO_INCREMENT per la taula `named_place_local_type`
 --
 ALTER TABLE `named_place_local_type`
   MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3038;
 
 --
--- AUTO_INCREMENT de la tabla `named_place_type`
+-- AUTO_INCREMENT per la taula `named_place_type`
 --
 ALTER TABLE `named_place_type`
   MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
--- AUTO_INCREMENT de la tabla `name_status`
+-- AUTO_INCREMENT per la taula `name_status`
 --
 ALTER TABLE `name_status`
   MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT de la tabla `priority`
+-- AUTO_INCREMENT per la taula `priority`
 --
 ALTER TABLE `priority`
   MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT de la tabla `project`
+-- AUTO_INCREMENT per la taula `project`
 --
 ALTER TABLE `project`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT de la tabla `project_base_layer_source`
+-- AUTO_INCREMENT per la taula `project_base_layer_source`
 --
 ALTER TABLE `project_base_layer_source`
   MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
--- AUTO_INCREMENT de la tabla `project_editable_fields`
+-- AUTO_INCREMENT per la taula `project_editable_fields`
 --
 ALTER TABLE `project_editable_fields`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
--- AUTO_INCREMENT de la tabla `project_wms_source`
+-- AUTO_INCREMENT per la taula `project_wms_source`
 --
 ALTER TABLE `project_wms_source`
   MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT de la tabla `pronuntiation_of_name`
+-- AUTO_INCREMENT per la taula `pronuntiation_of_name`
 --
 ALTER TABLE `pronuntiation_of_name`
   MODIFY `id` int(20) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `source_of_name`
+-- AUTO_INCREMENT per la taula `source_of_name`
 --
 ALTER TABLE `source_of_name`
   MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- Restricciones para tablas volcadas
+-- Restriccions per a les taules bolcades
 --
 
 --
--- Filtros para la tabla `geographical_name`
+-- Restriccions per a la taula `geographical_name`
 --
 ALTER TABLE `geographical_name`
   ADD CONSTRAINT `geographical_name_author_id_FK` FOREIGN KEY (`author_id`) REFERENCES `auth_user` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
@@ -763,14 +763,14 @@ ALTER TABLE `geographical_name`
   ADD CONSTRAINT `geographical_name_priority_id_FK` FOREIGN KEY (`priority_id`) REFERENCES `priority` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
--- Filtros para la tabla `geographical_name_informer`
+-- Restriccions per a la taula `geographical_name_informer`
 --
 ALTER TABLE `geographical_name_informer`
   ADD CONSTRAINT `geographical_name_infomer_geographical_name_id` FOREIGN KEY (`geographical_name_id`) REFERENCES `geographical_name` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   ADD CONSTRAINT `geographical_name_infomer_informer_id` FOREIGN KEY (`informer_id`) REFERENCES `informer` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
--- Filtros para la tabla `named_place`
+-- Restriccions per a la taula `named_place`
 --
 ALTER TABLE `named_place`
   ADD CONSTRAINT `named_place_FK` FOREIGN KEY (`competent_organization_id`) REFERENCES `competent_organization` (`id`),
@@ -778,27 +778,26 @@ ALTER TABLE `named_place`
   ADD CONSTRAINT `named_place_FK_2` FOREIGN KEY (`author_id`) REFERENCES `auth_user` (`id`);
 
 --
--- Filtros para la tabla `named_place_local_type`
+-- Restriccions per a la taula `named_place_local_type`
 --
 ALTER TABLE `named_place_local_type`
   ADD CONSTRAINT `named_place_local_type_named_place_type_id_FK` FOREIGN KEY (`named_place_local_type_id`) REFERENCES `named_place_type` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
--- Filtros para la tabla `project_base_layers`
+-- Restriccions per a la taula `project_base_layers`
 --
 ALTER TABLE `project_base_layers`
   ADD CONSTRAINT `project_base_layers_base_id_layerFK` FOREIGN KEY (`base_layer_source_id`) REFERENCES `project_base_layer_source` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   ADD CONSTRAINT `project_base_layers_project_id__FK` FOREIGN KEY (`project_Id`) REFERENCES `project` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
--- Filtros para la tabla `project_wms`
+-- Restriccions per a la taula `project_wms`
 --
 ALTER TABLE `project_wms`
-  ADD CONSTRAINT `project_wms_project_id_FK` FOREIGN KEY (`project_id`) REFERENCES `project` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  ADD CONSTRAINT `project_wms_wms_id_layer_FK` FOREIGN KEY (`wms_id`) REFERENCES `project_wms_source` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+  ADD CONSTRAINT `project_wms_project_id_FK` FOREIGN KEY (`project_id`) REFERENCES `project` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
--- Filtros para la tabla `pronuntiation_of_name`
+-- Restriccions per a la taula `pronuntiation_of_name`
 --
 ALTER TABLE `pronuntiation_of_name`
   ADD CONSTRAINT `pronuntiation_of_name_geographical_name_id_FK` FOREIGN KEY (`geografical_name_id`) REFERENCES `geographical_name` (`id`);
