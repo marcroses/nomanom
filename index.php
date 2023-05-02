@@ -1,6 +1,7 @@
 <?php
-    require_once "connectdb.php";
+    require_once "connectdb.php"; 
 
+	//query inicial
     $sql = "select * from project";
     $result = $conn->query($sql);
     if ($result->num_rows > 0) {
