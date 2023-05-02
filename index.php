@@ -19,7 +19,7 @@
 
     list($r, $g, $b) = sscanf($primary_color, "#%02x%02x%02x");
     
-    //Total users
+    //Total users from auth_users
     $sql = "select count(id) as total from auth_user";
     $result = $conn->query($sql);
     if ($result->num_rows > 0) {
